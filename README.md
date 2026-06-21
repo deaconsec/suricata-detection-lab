@@ -7,7 +7,7 @@ Cross-Segment-Traffic. Dokumentiert sind drei Detection-Fälle sowie das
 eigenständige Schließen einer Detection-Lücke durch eine selbst geschriebene
 Custom-Signatur.
 
-Dieses Lab baut auf [`pfsense-segmentation-lab`](#) auf und ergänzt die
+Dieses Lab baut auf [`network-segmentation-pfsense`](#) auf und ergänzt die
 defensive/Blue-Team-Seite: Erkennung statt nur Segmentierung.
 
 ---
