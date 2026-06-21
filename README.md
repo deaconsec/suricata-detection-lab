@@ -161,8 +161,7 @@ viele Web-Probes feuert = automatisierter Scanner. Die Ereignisse wurden per Ale
 ### Fall 3 - Gezielte SQL-Injection (sqlmap)
 
 ```bash
-sqlmap -u "http://10.10.40.100/vulnerabilities/sqli/?id=1&Submit=Submit" \
-  --cookie="PHPSESSID=<session>; security=low" --batch --dbs
+sqlmap -u "http://10.10.40.100/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="PHPSESSID=<session>; security=low" --batch --dbs
 ```
 
 Der `id`-Parameter ist über vier Techniken injizierbar (boolean-based, error-based,
@@ -226,8 +225,7 @@ geringe False-Positive-Rate. SID 1000001 (lokaler Bereich ≥ 1000000).
 **Verifikation** mit garantiert lesbarem Payload:
 
 ```bash
-curl "http://10.10.40.100/vulnerabilities/sqli/?id=1+UNION+SELECT+1,2&Submit=Submit" \
-  --cookie "PHPSESSID=<session>; security=low"
+curl "http://10.10.40.100/vulnerabilities/sqli/?id=1+UNION+SELECT+1,2&Submit=Submit" --cookie "PHPSESSID=<session>; security=low"
 ```
 
 ![curl mit lesbarem UNION SELECT im URI](screenshots/customRule_debugging/curl_test.png)
